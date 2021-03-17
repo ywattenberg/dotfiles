@@ -1,0 +1,79 @@
+{
+	"layer": "bottom",
+	"position": "top",
+	"height": 44,
+	"modules-left": ["sway/workspaces", "custom/spotify", "sway/mode"],
+	"modules-center": ["clock"],
+	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "battery"],
+	"sway/mode": {
+		"format": "{}"
+	},
+	"mpd": {
+		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})  ",
+		//"format": "{stateIcon} {consumeIcon}",
+		"format-disconnected": "Disconnected",
+		"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+		"unknown-tag": "N/A",
+		"interval": 2,
+		"random-icons": {
+		    	"on": " "
+		},
+		"repeat-icons": {
+		    	"on": "凌"
+		},
+		"state-icons": {
+		    	"paused": "栗",
+		    	"playing": "契"
+		},
+		"tooltip-format": "MPD (connected)",
+		"tooltip-format-disconnected": "MPD (disconnected)"
+	},	
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-icons": {
+			"default": ["奄", "奔", "墳"]
+		},
+		"scroll-step": 5,
+        	"on-click": "pavucontrol"
+	},
+    	"custom/spotify": {
+        	"interval": 10,
+        	"return-type": "json",
+        	"exec": "~/.config/waybar/modules/spotify.sh",
+        	"exec-if": "pgrep spotify",
+        	"escape": true
+    	},
+	"temperature": {
+		"format": " {}"
+	},
+	"network": {
+		"tooltip": false,
+		"format-wifi": "直{essid} {ipaddr}",
+		"format-ethernet": " {ipaddr}"
+	},
+	"cpu": {
+		"tooltip": false,
+		"format": " {}%"
+	},
+	"memory": {
+		"tooltip": false,
+		"format": " {}%"
+	},
+	"clock": {
+        	"tooltip-format": "{:%H:%M}",
+        	"format-alt": "{:%Y-%m-%d}"
+    	},
+	"battery": {
+       	 	"format": "{icon}  {capacity}%",
+        	"format-icons": ["", "", "", "", ""],
+        	"format-charging": " {capacity}%",
+        	"interval": 30,
+        	"states": {
+            		"warning": 25,
+            		"critical": 10
+        	},
+        	"tooltip": false
+	}
+}
