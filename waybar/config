@@ -1,7 +1,7 @@
 {
 	"layer": "bottom",
 	"position": "top",
-	"height": 44,
+	"height": 40,
 	"modules-left": ["sway/workspaces", "custom/spotify", "sway/mode"],
 	"modules-center": ["clock"],
 	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "battery"],
@@ -39,14 +39,16 @@
         	"on-click": "pavucontrol"
 	},
     	"custom/spotify": {
+		"tooltip": false,
         	"interval": 10,
         	"return-type": "json",
         	"exec": "~/.config/waybar/modules/spotify.sh",
         	"exec-if": "pgrep spotify",
+		"on-click": "spotify",
         	"escape": true
     	},
 	"temperature": {
-		"format": " {}"
+		"format": " {}°C"
 	},
 	"network": {
 		"tooltip": false,
@@ -62,8 +64,9 @@
 		"format": " {}%"
 	},
 	"clock": {
+		"format": "{:%H:%M %a}",
         	"tooltip-format": "{:%H:%M}",
-        	"format-alt": "{:%Y-%m-%d}"
+        	"format-alt": "{:%d-%m-%Y}"
     	},
 	"battery": {
        	 	"format": "{icon}  {capacity}%",
