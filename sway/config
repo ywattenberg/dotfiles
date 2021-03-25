@@ -26,7 +26,6 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 output DP-4 bg /usr/share/backgrounds/sway/girl_super_wide.png fill
 output DP-4 bg /usr/share/backgrounds/sway/girl_super_wide.png fill
 
-output DP-4 scale 1
 output DP-4 pos 0 0 res 5120x1440 
 
 output eDP-1 scale 2

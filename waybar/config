@@ -8,6 +8,9 @@
 	"sway/mode": {
 		"format": "{}"
 	},
+    "mode":{
+        "format": "{}"
+    },
 	"mpd": {
 		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})  ",
 		//"format": "{stateIcon} {consumeIcon}",

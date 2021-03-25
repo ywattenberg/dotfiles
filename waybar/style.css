@@ -63,6 +63,17 @@ window#waybar.PCSX2 #window {
 	color: #ff79c6;
 }
 
+#mode {
+	margin-top: 2px;
+	margin-left: 12px;
+	margin-bottom: 2px;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 26px;
+	background: #282a36;
+	transition: none;
+}
+
 #mpd {
 	margin-top: 2px;
 	margin-left: 8px;
