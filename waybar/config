@@ -56,7 +56,7 @@
 	"network": {
 		"tooltip": false,
 		"format-wifi": "直{essid} {ipaddr}",
-		"format-ethernet": " {ipaddr}"
+		"format-ethernet": " {ipaddr}"
 	},
 	"cpu": {
 		"tooltip": false,
