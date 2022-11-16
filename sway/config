@@ -204,7 +204,7 @@ exec /home/watten/mako/mako
     bindsym $mod+a focus parent
 
     # No borders and gaps
-    default_border normal 0
+    default_border none
     gaps inner 10
 
 #
