@@ -54,9 +54,10 @@
 		"format": " {}°C"
 	},
 	"network": {
-		"tooltip": false,
-		"format-wifi": "直{essid} {ipaddr}",
-		"format-ethernet": " {ipaddr}"
+		"tooltip": true,
+		"format-wifi": "直{essid}",
+		"format-ethernet": " ",
+        "tooltip-format": "{ipaddr}"
 	},
 	"cpu": {
 		"tooltip": false,
