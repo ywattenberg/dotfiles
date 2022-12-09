@@ -4,13 +4,10 @@
 	"height": 40,
 	"modules-left": ["sway/workspaces", "custom/spotify", "sway/mode"],
 	"modules-center": ["clock"],
-	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "battery"],
+	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "battery", "custom/layout"],
 	"sway/mode": {
 		"format": "{}"
 	},
-    "mode":{
-        "format": "{}"
-    },
 	"mpd": {
 		"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})  ",
 		//"format": "{stateIcon} {consumeIcon}",
@@ -41,15 +38,22 @@
 		"scroll-step": 5,
         	"on-click": "pavucontrol"
 	},
-    	"custom/spotify": {
+    "custom/spotify": {
 		"tooltip": false,
-        	"interval": 10,
-        	"return-type": "json",
-        	"exec": "~/.config/waybar/modules/spotify.sh",
-        	"exec-if": "pgrep spotify",
+        "interval": 10,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
 		"on-click": "spotify",
-        	"escape": true
+        "escape": true
     	},
+    "custom/layout":{
+        "tooltip": true,
+        "tooltip-format": "alt + shift",
+        "interval": 10,
+        "return-type": "json",
+        "exec": "~/.config/waybar/modules/layout.sh"
+    },
 	"temperature": {
 		"format": " {}°C"
 	},
