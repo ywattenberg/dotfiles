@@ -8,4 +8,4 @@ else
     text="de"
 fi
 
-echo -e "{\"text\":\"$text\"}"
+echo -e "{\"text\":\"$text\", \"tooltip\":\"alt + shift\"}"

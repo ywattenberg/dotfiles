@@ -49,7 +49,6 @@
     	},
     "custom/layout":{
         "tooltip": true,
-        "tooltip-format": "alt + shift",
         "interval": 10,
         "return-type": "json",
         "exec": "~/.config/waybar/modules/layout.sh"
