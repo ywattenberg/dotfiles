@@ -27,8 +27,8 @@ output 'Unknown 0x07C8 0x00000000' scale 2
 output 'Unknown 0x07C8 0x00000000' res 3840x2160 
 
 # Setup for ultra wide @ Berlin
-output 'Samsung Electric Company C49RG9x H1AK500000' bg /usr/share/backgrounds/sway/girl_super_wide.png fill
-output 'Samsung Electric Company C49RG9x H1AK500000' pos 0 0 res 5120x1440 
+output 'Samsung Electric Company C49RG9x HNKNA00066' bg /usr/share/backgrounds/sway/elden_ring.png fill
+output 'Samsung Electric Company C49RG9x HNKNA00066' pos 0 0 res 5120x1440 
 
 # Setup for dual @ Zurich
 output 'Iiyama North America PL2730H 1153674501710' pos 2665 0 res 1980x1080
