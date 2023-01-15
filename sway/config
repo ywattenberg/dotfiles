@@ -49,10 +49,10 @@ exec_always /home/watten/.config/sway/laptop-lid.sh
 
 ### Idle configuration
 exec swayidle -w \
-          timeout 600 'swaylock -f -c 000000' \
+          timeout 600 "/home/watten/.config/sway/swaylock.sh"\
           timeout 300 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+          before-sleep "/home/watten/.config/sway/swaylock.sh"
 
 
 # Notifications
@@ -110,7 +110,7 @@ exec /home/watten/mako/mako
     bindsym $mod+Shift+c reload
 
     # Lock screen
-    bindsym $mod+x exec swaylock -f -c 000000
+    bindsym $mod+x exec /home/watten/.config/sway/swaylock.sh
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -248,8 +248,8 @@ bindsym $mod+r mode "resize"
 #
 set $screenshot 1 selected, 2 whole, 3 selected clipboard, 4 whole clipboard, 5 swappy
 mode "$screenshot" {
-    bindsym 1 exec 'grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +"%Y%m%d%H%M%S").png', mode "default"
-    bindsym 2 exec 'grim ~/Pictures/Screenshots/$(date +"%Y%m%d%H%M%S").png', mode "default"
+    bindsym 1 exec 'grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +"%Y_%m_%d_%H:%M:%S").png', mode "default"
+    bindsym 2 exec 'grim ~/Pictures/Screenshots/$(date +"%Y_%m_%d_%H:%M:%S").png', mode "default"
     bindsym 3 exec 'grim -g "$(slurp)" - | wl-copy', mode "default"
     bindsym 4 exec 'grim - | wl-copy', mode "default"
     bindsym 5 exec 'grim -g "$(slurp)" - | swappy -f -', mode "default"
@@ -272,19 +272,6 @@ bar {
 }
 
 include /etc/sway/config.d/*
-
-#
-# Default Workspaces for apps
-#
-
-assign "[class=Nextcloud]" workspace 10
-
-
-#
-# Add startup applicatinons
-#
-# 
-exec /home/watten/bin/Nextcloud.AppImage
 
 #
 # Set cursor
