@@ -1,0 +1,16 @@
+#
+# Default Workspaces for apps
+#
+
+assign "[class=Nextcloud]" workspace 10
+assign "[class=discord]"   workspace 9
+assign "[class=spotify]"   workspace 8
+
+#
+# Add startup applicatinons
+#
+#
+
+exec /home/watten/bin/Nextcloud.AppImage
+exec /usr/bin/discord --no-sandbox
+exec /usr/bin/spotify --no-sandbox
