@@ -4,7 +4,7 @@
 	"height": 40,
 	"modules-left": ["sway/workspaces", "custom/spotify", "sway/mode"],
 	"modules-center": ["clock"],
-	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "battery", "custom/layout"],
+	"modules-right": ["network", "pulseaudio", "battery", "custom/layout"],
 	"sway/mode": {
 		"format": "{}"
 	},
