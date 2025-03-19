@@ -4,9 +4,14 @@ class=$(playerctl metadata --player=spotify --format '{{lc(status)}}')
 icon="阮"
 
 if [[ $class == "playing" ]]; then
-  info=$(playerctl metadata --player=spotify --format '{{artist}} - {{title}}')
+  printf -v info "%q" "$(playerctl metadata --player=spotify --format '{{artist}} - {{title}}')"
+  info="${info//\"/\\\"}"
   if [[ ${#info} -gt 40 ]]; then
-    info=$(echo $info | cut -c1-40)"..."
+    begin=$(($(date +%s) % ${#info}))
+    info+=" - "${info}
+    info=${info:begin:40}
+    text="$icon $info"
+
   fi
   text="$icon $info"
 elif [[ $class == "paused" ]]; then

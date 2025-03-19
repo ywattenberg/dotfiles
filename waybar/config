@@ -40,9 +40,9 @@
 	},
     "custom/spotify": {
 		"tooltip": false,
-        "interval": 10,
+        "interval": 1,
         "return-type": "json",
-        "exec": "~/.config/waybar/modules/spotify.sh",
+        "exec": "~/.config/waybar/modules/spotify.py",
         "exec-if": "pgrep spotify",
 		"on-click": "spotify",
         "escape": true

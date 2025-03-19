@@ -22,24 +22,35 @@ set $term alacritty
 ### Output configuration
 
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output 'Unknown 0x07C8 0x00000000' bg /usr/share/backgrounds/sway/fractals.jpg fill
-output 'Unknown 0x07C8 0x00000000' scale 2
-output 'Unknown 0x07C8 0x00000000' res 3840x2160 
+output 'BOE 0x07C8 Unknown' pos 320 1440 scale 2 res 3840x2160
 
+output * bg '/usr/share/backgrounds/sway/"malenia-elden-ring.jpg"' fill
 # Setup for ultra wide @ Berlin
-output 'Samsung Electric Company C49RG9x HNKNA00066' bg /usr/share/backgrounds/sway/elden_ring.png fill
-output 'Samsung Electric Company C49RG9x HNKNA00066' pos 0 0 res 5120x1440 
+output 'Samsung Electric Company C49RG9x HNKNA00066' bg /usr/share/backgrounds/sway/nasa_back.jpg fill
+output 'Samsung Electric Company C49RG9x HNKNA00066' pos 0 1440 res 5120x1440 
 
 # Setup for dual @ Zurich
 output 'Iiyama North America PL2730H 1153674501710' pos 2665 0 res 1980x1080
-output 'Unknown ROG XG279Q L7LMQS093503' pos 100 0 
-output 'Iiyama North America PL2730H 1153674501710' bg /usr/share/backgrounds/sway/"geass_1.jpg" fill
-output 'Unknown ROG XG279Q L7LMQS093503' bg /usr/share/backgrounds/sway/"geass_1.jpg" fill
+output 'ASUSTek COMPUTER INC ROG XG279Q L7LMQS093503' pos 100 0 
+output 'Iiyama North America PL2730H 1153674501710' bg /usr/share/backgrounds/sway/"malenia-elden-ring.jpg" fill
+output 'ASUSTek COMPUTER INC ROG XG279Q L7LMQS093503' bg /usr/share/backgrounds/sway/"malenia-elden-ring.jpg" fill
 
 bindswitch --reload --locked lid:on output eDP-1 disable
 bindswitch --reload --locked lid:off output eDP-1 enable
 
-exec_always /home/watten/.config/sway/laptop-lid.sh
+
+# Setup for monitor @ Office Zurich
+output 'Dell Inc. DELL P2720DC H9HVL93' bg /usr/share/backgrounds/sway/IceHalo.jpg fill
+output 'Dell Inc. DELL P2720DC H9HVL93' pos 0 0 res 2560x1440
+
+output 'Dell Inc. DELL P2720DC 312SK53' bg /usr/share/backgrounds/sway/IceHalo.jpg fill
+output 'Dell Inc. DELL P2720DC 312SK53' pos 0 0 res 2560x1440
+
+output 'Dell Inc. DELL U2713H C6F0K47U0HGL' bg /usr/share/backgrounds/sway/IceHalo.jpg fill
+output 'Dell Inc. DELL U2713H C6F0K47U0HGL' pos 2560 0 res 2560x1440
+
+
+# exec_always /home/watten/.config/sway/laptop-lid.sh
 #
 # Example configuration:
 #
@@ -51,10 +62,8 @@ exec_always /home/watten/.config/sway/laptop-lid.sh
 exec swayidle -w \
           timeout 500 'swaymsg "output * dpms off"' \
                resume 'swaymsg "output * dpms on"' \
-          timeout 300 'exec /home/watten/.config/sway/swaylock.sh'\
-          before-sleep 'exec /home/watten/.config/sway/swaylock.sh'
-
-
+          timeout 50  'exec  ~/.config/sway/swaylock.sh --grace 20' \
+          before-sleep 'exec ~/.config/sway/swaylock.sh' 
 # Notifications
 #exec mako --layer=overlay --border-radius=15 --background-color=#bd93f9 --text-color=#4d4d4d
 exec /home/watten/mako/mako
@@ -77,6 +86,12 @@ exec /home/watten/mako/mako
     accel_profile flat
     pointer_accel 0.4
    }
+
+   input "6127:24793:ThinkPad_X1_Presenter_Mouse" {
+    natural_scroll disable
+    accel_profile flat
+    pointer_accel 0.2
+   } 
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
@@ -84,7 +99,7 @@ exec /home/watten/mako/mako
         xkb_layout us,de
         xkb_variant ,nodeadkeys
         #Hotkey to change Keyboardlayout
-        xkb_options grp:alt_shift_toggle
+        xkb_options grp:alt_caps_toggle
     }
 ### Key bindings
 #
@@ -94,7 +109,7 @@ exec /home/watten/mako/mako
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu

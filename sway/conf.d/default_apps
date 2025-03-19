@@ -7,16 +7,19 @@ assign {
     "[class=discord]"   number 9
     "[class=Spotify]"   number 8
     "[class=Signal]"    number 9
+    "[class=Mattermost"] number 9
 }
 for_window [class="Spotify"] move window to workspace number 8
 for_window [class="discord"] move window to workspace number 9
 for_window [class="Signal"]  move window to workspace number 9
+for_window [class="Mattermost"]  move window to workspace number 9
 #
 # Add startup applicatinons
 #
 #
-exec /home/watten/bin/Nextcloud.AppImage
+exec /home/watten/bin/Nextcloud_5cbe3362585cfaace861289d8773450b.AppImage
 exec /usr/bin/discord --no-sandbox
 exec /usr/bin/spotify --no-sandbox
 exec /snap/bin/signal-desktop 
 exec sudo powertop --auto-tune
+exec /usr/bin/mattermost-desktop
