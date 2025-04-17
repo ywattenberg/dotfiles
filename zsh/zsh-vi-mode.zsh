@@ -81,7 +81,7 @@
 #   ZVM_VI_HIGHLIGHT_BACKGROUND=#ff0000         # Hex value
 #   ZVM_VI_HIGHLIGHT_EXTRASTYLE=bold,underline  # bold and underline
 #
-# ZVM_VI_SURROUND_BINDKEY
+ZVM_VI_SURROUND_BINDKEY='s-prefix'
 # the key binding mode for surround operating (default is 'classic')
 #
 # 1. 'classic' mode (verb->s->surround):
@@ -143,7 +143,7 @@
 # time entering normal mode
 #
 # ZVM_NORMAL_MODE_CURSOR:
-# the prompt cursor in normal mode
+# the prompt cursor in normal modepromr
 #
 # ZVM_INSERT_MODE_CURSOR:
 # the prompt cursor in insert mode

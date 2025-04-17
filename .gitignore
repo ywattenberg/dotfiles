@@ -1,0 +1,9 @@
+*
+!.gitignore
+!nvim/*
+!tmux/*
+!ruff/*
+!kitty/*
+!kanata/*
+!hypr/*
+!zsh/*

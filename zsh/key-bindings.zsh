@@ -142,7 +142,7 @@ bindkey "^[m" copy-prev-shell-word
 # bindkey '^I' complete-word
 # shift tab
 # bindkey '^[[Z' autosuggest-accept
-bindkey '^y' autosuggest-accept
+bindkey '^Y' autosuggest-accept
 ## Fix weird sequence that rxvt produces
 #bindkey -s '^[[Z' '\t'
 #
