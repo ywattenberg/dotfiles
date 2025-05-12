@@ -9,3 +9,10 @@
 !zsh/*
 !botop/*
 !yazi/*
+
+nvim/tags
+nvim/test.sh
+nvim/*.luarc.json
+nvim/nvim
+nvim/spell/
+
