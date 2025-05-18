@@ -23,3 +23,5 @@ alias wgdb="sudo wg-quick down berlin"
 alias vim="nvim"
 alias vi="nvim"
 alias rmr="rm -r "
+
+alias android="QT_QPA_PLATFORM=xcb && $ANDROID_HOME/emulator/emulator -avd Pixel_9_Pro"
