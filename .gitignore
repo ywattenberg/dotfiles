@@ -24,4 +24,4 @@ nvim/test.sh
 nvim/*.luarc.json
 nvim/nvim
 nvim/spell/
-
+tmux/plugins/*
