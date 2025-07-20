@@ -28,6 +28,7 @@ path+=("/home/wattenberg/Flutter/flutter/bin")
 path+=("/home/wattenberg/.local/bin")
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 # export ANDROID_HOME="/home/Android/Sdk"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
