@@ -26,16 +26,16 @@ return {
         :find()
     end
 
-    vim.keymap.set('n', '<C-e>', function()
+    vim.keymap.set('n', '<leader>e', function()
       toggle_telescope(harpoon:list())
     end, { desc = 'Open harpoon window' })
 
     vim.keymap.set('n', '<leader>a', function()
       harpoon:list():add()
     end, { desc = '[A]dd buffer to harpoon' })
-    -- vim.keymap.set('n', '<C-e>', function()
-    --   harpoon.ui:toggle_quick_menu(harpoon:list())
-    -- end, { desc = '[Ctrl-e] toggle harpoon menu' })
+    vim.keymap.set('n', '<C-e>', function()
+      harpoon.ui:toggle_quick_menu(harpoon:list())
+    end, { desc = '[Ctrl-e] toggle harpoon menu' })
     -- Toggle previous & next buffers stored within Harpoon list
     vim.keymap.set('n', '<C-S-P>', function()
       harpoon:list():prev()
