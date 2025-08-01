@@ -17,7 +17,7 @@ setopt autocd extendedglob
 eval "$(starship init zsh)"
 
 # Loop through all .zsh files in ~/.zsh directory
-for file in ~/.config/zsh/plugins/*(.); do
+for file in $XDG_CONFIG_HOME/zsh/*.zsh; do
   # Check if it's a regular file and not a directory
   if [[ -f "$file" ]]; then
     source "$file"
