@@ -13,11 +13,10 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
 # End of lines configured by zsh-newuser-install
-#
+export XDG_CONFIG_HOME='/home/wattenberg/.config'
 eval "$(starship init zsh)"
-
 # Loop through all .zsh files in ~/.zsh directory
-for file in $XDG_CONFIG_HOME/zsh/*.zsh; do
+for file in $XDG_CONFIG_HOME/zsh/plugins/**/*.zsh; do
   # Check if it's a regular file and not a directory
   if [[ -f "$file" ]]; then
     source "$file"
