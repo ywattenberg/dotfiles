@@ -2,7 +2,7 @@
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored _approximate
-zstyle :compinstall filename '/home/wattenberg/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
@@ -13,7 +13,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
 # End of lines configured by zsh-newuser-install
-export XDG_CONFIG_HOME='/home/wattenberg/.config'
+export XDG_CONFIG_HOME="$HOME/.config"
 eval "$(starship init zsh)"
 # Loop through all .zsh files in ~/.zsh directory
 for file in $XDG_CONFIG_HOME/zsh/plugins/**/*.zsh; do
@@ -23,8 +23,8 @@ for file in $XDG_CONFIG_HOME/zsh/plugins/**/*.zsh; do
   fi
 done
 
-path+=("/home/wattenberg/Flutter/flutter/bin")
-path+=("/home/wattenberg/.local/bin")
+path+=("$HOME/Flutter/flutter/bin")
+path+=("$HOME/.local/bin")
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 # export ANDROID_HOME="/home/Android/Sdk"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
