@@ -6,18 +6,16 @@
 !ruff
 !kitty
 !kanata
-!hypr
 !zsh
-!botop
+!btop
 !yazi
 !nvim/**
 !tmux/**
 !ruff/**
 !kitty/**
 !kanata/**
-!hypr/**
 !zsh/**
-!botop/**
+!btop/**
 !yazi/**
 
 nvim/tags
